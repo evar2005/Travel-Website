@@ -133,9 +133,8 @@ font-size: var(--secondary-font-size);
   font-weight: var(--secondary-font-weight);
 }
 /* input field styles end */
-/* lable and input styles here */
+/* smaller device responsive */
 @media  screen and (max-width: 576px) {
-  /* sheared styles */
   header , 
   main ,
   .banner-container{
