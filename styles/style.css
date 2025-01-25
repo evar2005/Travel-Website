@@ -6,15 +6,20 @@
 
 :root {
   --primary-color: #FF5400;
-  --secondary-color: #5A5A5D;
+  --secondary-color: rgba(90, 90, 93, 100%);
   --nav-list-color: #424247;
-  --text-color: #131318;
+  --text-color: rgba(19, 19, 24, 70%);
+  --heading-text-color: #131318;
   --secondary-text-color: #FFFFFF;
   --primary-font-weight: 800;
   --secondary-font-weight: 400;
   --primary-font-size: 2.8rem;
   --secondary-font-size: 1rem;
+  --title-font-size: 1.9rem;
   --background-color: rgba(255, 255, 255, 0.3);
+  --content-1-color: rgba(255, 181, 99, 5%);
+  --content-2-color: rgba(41, 206, 246, 5%);
+  --content-3-color: rgba(233, 68, 68, 5%);
 }
 /* base styles */
 body {
@@ -28,18 +33,36 @@ header , main {
   font-size: var(--secondary-font-size);
   font-weight: var(--secondary-font-weight);
   color: var(--text-color);
+  line-height: 26px;
+  margin: 10px;
+}
+.destination-section ,
+.why-choose-us-section ,
+.choose-us-content ,
+.deals-discounts-section ,
+.perfect-getaway-section{
+  padding-top: 50px;
 }
 .btn-primary {
   background-color: var(--primary-color);
   color: var(--secondary-text-color);
   font-weight: var(--primary-font-weight);
   font-size: 1.3rem;
-  transition: 2s;
+  transition: 4s;
 }
 .btn-primary:hover{
   background-color: var(--secondary-text-color);
   color: var(--primary-color);
 }
+.title{
+  font-weight: var(--primary-font-weight);
+  font-size: var(--primary-font-size);
+ }
+ .overlay-text{
+  font-weight: var(--primary-font-weight);
+  font-size: var(--title-font-size);
+}
+/* sheared styles end */
 /* navigation- section styles */
 .nav-bar{
   display: flex;
@@ -133,6 +156,100 @@ font-size: var(--secondary-font-size);
   font-weight: var(--secondary-font-weight);
 }
 /* input field styles end */
+/* header styles end*/
+ /*main section styles hear*/ 
+ /* popular tour section styles */
+ .tour-container{
+  display: flex;
+  gap: 35px;
+ }
+ .tour-title ul ,
+ .perfect-getaway-title ul{
+  margin: 24px;/*sheared styles */
+ }
+ .tour-title li ,
+ .perfect-getaway-title li{
+  margin: 20px;/*sheared styles */
+ }
+ /* popular tour section end */
+ /* destination-section styles */
+ /* destination image container styles */
+ .destination-section{
+  text-align: center;
+ }
+ .destination-img-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+ }
+ .img-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .img-container img{
+  max-width: 100%;
+  height: auto;
+ }
+.description-text{
+  position: absolute;
+  color: var(--secondary-text-color);
+}
+/* why-choose-us-section styles here*/
+/* why-choose us title styles */
+.choose-us-title{
+  text-align: center;
+}
+/* why choose us container styles */
+.choose-us-content{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  justify-items: center;
+}
+.choose-us-content .content{
+  padding: 35px;
+  border-radius: 16px;
+  width: 573px;
+  height: 284px;
+}
+.content img{
+  padding-bottom: 15px;
+}
+.choose-us-item-1{
+  background-color: var(--content-1-color);
+  border: 2px solid var(--content-1-color);
+}
+.choose-us-item-2{
+  background-color: var(--content-2-color);
+  border: 2px solid var(--content-2-color);
+}
+.choose-us-item-3{
+  background-color: var(--content-3-color);
+  border: 2px solid var(--content-3-color);
+  justify-content: center;
+  align-items: center;
+  grid-column: span 2;
+}
+ .trust-tagline{
+  color: var(--secondary-color);
+  margin: 0;
+ }
+ .heading-title{
+ color: var(--heading-text-color);
+ }
+ /* deals-discounts section */
+ /* A Simple Perfect Place To Get Lost-section */
+ .perfect-getaway-container{
+  display: flex;
+  gap: 50px;
+ }
+ .perfect-getaway-title li{
+  font-weight: 700;
+  color: var(--heading-text-color);
+ }
+ 
 /* smaller device responsive */
 @media  screen and (max-width: 576px) {
   header , 
@@ -159,13 +276,35 @@ font-size: var(--secondary-font-size);
   }
   /* nav links styles end */
   .logo h3 ,
-  .banner-title h2 {
-    font-size: 1.9rem;
+   .title {
+    font-size: var(--title-font-size);
   }
-  .input-container{
+  .banner-title h2{
+    font-size: 2rem;
+  }
+  .input-container ,
+  .tour-container,
+  .destination-img-container ,
+  .perfect-getaway-container{
     flex-direction: column;
   }
-  input , select , button{
+  
+  input , select , button ,
+  .tour-img img ,
+  .choose-us-content .content{
     width: 100%;
+    height: auto;
   }
+  .img-container img{
+    width: 335px;
+    height: 176px;
+  }
+  .choose-us-content{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .choose-us-item-3{
+    grid-column: span 1;
+  }
+  
 }
