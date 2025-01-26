@@ -426,7 +426,7 @@ padding: 19px;
   
 }
 /* mudium devices responsiveness */
-@media  screen and (min-width: 577px) and (max-width: 1024px) {
+@media  screen and (min-width: 576px) and (max-width: 1024px){
   header , 
   main ,
   .banner-container ,
@@ -458,8 +458,12 @@ padding: 19px;
    .news-logo{
     font-size: var(--title-font-size);
   }
+  .banner-title h2{
+    font-size: 2.8rem;
+  }
   .input-container ,
   .tour-container,
+  .destination-img-container ,
   .perfect-getaway-container ,
   .newsletter-container ,
   .column-wrapper-1 ,
@@ -480,11 +484,14 @@ padding: 19px;
     width: 335px;
     height: 176px;
   }
+  .choose-us-content{
+    grid-template-columns: 1fr;
+  }
+  .choose-us-item-3{
+    grid-column: span 1;
+  }
   .newsletter-logo{
     left: 0;
-  }
-  .destination-img-container{
-    justify-content: center;
   }
   
 }
