@@ -9,6 +9,7 @@
   --secondary-color: rgba(90, 90, 93, 100%);
   --nav-list-color: #424247;
   --text-color: rgba(19, 19, 24, 70%);
+  --input-background: rgba(19, 19, 24, 5%);
   --heading-text-color: #131318;
   --secondary-text-color: #FFFFFF;
   --primary-font-weight: 800;
@@ -17,16 +18,18 @@
   --secondary-font-size: 1rem;
   --title-font-size: 1.9rem;
   --background-color: rgba(255, 255, 255, 0.3);
+  --discount-background-color: rgba(255, 255, 255, 80%);
   --content-1-color: rgba(255, 181, 99, 5%);
   --content-2-color: rgba(41, 206, 246, 5%);
   --content-3-color: rgba(233, 68, 68, 5%);
+  --logo-font-size: 1.4rem;
 }
 /* base styles */
 body {
   font-family: "Mulish", serif;
 }
 /* sheard styles */
-header , main {
+header , main{
  padding: 50px 140px;
 }
 .sub-title{
@@ -36,14 +39,21 @@ header , main {
   line-height: 26px;
   margin: 10px;
 }
+
 .destination-section ,
 .why-choose-us-section ,
 .choose-us-content ,
 .deals-discounts-section ,
-.perfect-getaway-section{
+.perfect-getaway-section,
+.newsletter-section ,
+footer{
   padding-top: 50px;
 }
-.btn-primary {
+.trust-tagline{
+  color: var(--secondary-color);
+  margin: 0;
+ }
+.btn-primary{
   background-color: var(--primary-color);
   color: var(--secondary-text-color);
   font-weight: var(--primary-font-weight);
@@ -70,7 +80,7 @@ header , main {
   justify-content: space-between;
 }
 /* logo styles here */
-.nav-bar > .logo{
+ .logo{
   display: flex;
   align-items: center;
 }
@@ -201,6 +211,7 @@ font-size: var(--secondary-font-size);
 .choose-us-title{
   text-align: center;
 }
+
 /* why choose us container styles */
 .choose-us-content{
   display: grid;
@@ -208,7 +219,7 @@ font-size: var(--secondary-font-size);
   gap: 50px;
   justify-items: center;
 }
-.choose-us-content .content{
+.choose-us-content .content{ 
   padding: 35px;
   border-radius: 16px;
   width: 573px;
@@ -232,14 +243,43 @@ font-size: var(--secondary-font-size);
   align-items: center;
   grid-column: span 2;
 }
- .trust-tagline{
-  color: var(--secondary-color);
-  margin: 0;
- }
  .heading-title{
  color: var(--heading-text-color);
  }
- /* deals-discounts section */
+ /* deals-discounts section  styles*/
+ .price{
+  color: var(--primary-color);
+ }
+ .icon-container{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+ }
+ .right-side{
+  background-color: var(--discount-background-color);
+  padding: 50px;
+  border-radius: 16px 20px;
+  width: 570px;
+ }
+ .column{
+  background-image: url('/images/Group\ 39.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 30px;
+  border-radius: 16px;
+  padding: 56px;
+ }
+ .column-wrapper-1 ,
+ .column-wrapper-3 {
+  display: flex;
+  flex-direction: row-reverse;
+ }
+.deals-discounts-title{
+  text-align: center;
+  margin-bottom: 50px;
+}
+  /* deals-discounts section  styles finish*/
  /* A Simple Perfect Place To Get Lost-section */
  .perfect-getaway-container{
   display: flex;
@@ -249,12 +289,80 @@ font-size: var(--secondary-font-size);
   font-weight: 700;
   color: var(--heading-text-color);
  }
- 
+.iframe{
+  width: 500px;
+  height: 400px;
+  border-radius: 16px;
+}
+ /* Newsletter section styles */
+ .newsletter-container{
+  display: flex;
+  gap: 30px;
+ }
+ .newsletter-wrapper{
+  color: var(--secondary-color);
+  margin: 0;
+}
+/* newsletter-img styles */
+.newsletter-img {
+  position: relative;
+}
+/* newsletter-logo styles*/
+.newsletter-logo{
+  position: absolute;
+  bottom: 55px;
+  left: 330px;
+  transform: rotate(-19.64deg);
+  color: #FFFFFF;
+  background-color: #FF5400;
+  width: 324px;
+  padding: 15px;
+  border-radius: 16px;
+  text-align: center;
+}
+.newsletter-title{
+  border: 1px solid var(--primary-color);
+  border-radius: 16px;
+  padding: 40px;
+}
+.newsletter-logo p{
+  font-size: var(--logo-font-size);
+}
+.newsletter-form input{
+background-color: var(--input-background);
+width: 100%;
+margin-bottom: 16px;
+padding: 19px;
+}
+/* hr styles */
+.custom-hr{
+  border: 0 !important;
+  height: 2px !important;
+  background-color: var(--input-background);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+/* footer section styles */
+.footer-logo{
+  display: flex;
+  justify-content: center;
+}
+.footer-container{
+  background-color: var(--input-background);
+  text-align: center;
+  padding: 110px 300px;
+}
+.social-icons{
+  padding: 30px;
+}
 /* smaller device responsive */
 @media  screen and (max-width: 576px) {
   header , 
   main ,
-  .banner-container{
+  .banner-container ,
+  .footer-container ,
+  .right-side ,
+  .column{
     padding: 20px;
   }
   /* nav links styles */
@@ -276,7 +384,8 @@ font-size: var(--secondary-font-size);
   }
   /* nav links styles end */
   .logo h3 ,
-   .title {
+   .title ,
+   .news-logo{
     font-size: var(--title-font-size);
   }
   .banner-title h2{
@@ -285,13 +394,19 @@ font-size: var(--secondary-font-size);
   .input-container ,
   .tour-container,
   .destination-img-container ,
-  .perfect-getaway-container{
+  .perfect-getaway-container ,
+  .newsletter-container ,
+  .column-wrapper-1 ,
+  .column-wrapper-3{
     flex-direction: column;
   }
   
   input , select , button ,
   .tour-img img ,
-  .choose-us-content .content{
+  .choose-us-content .content ,
+  .iframe ,
+  .newsletter-img img ,
+  .right-side{
     width: 100%;
     height: auto;
   }
@@ -301,10 +416,75 @@ font-size: var(--secondary-font-size);
   }
   .choose-us-content{
     grid-template-columns: 1fr;
-    text-align: center;
   }
   .choose-us-item-3{
     grid-column: span 1;
+  }
+  .newsletter-logo{
+    left: 0;
+  }
+  
+}
+/* mudium devices responsiveness */
+@media  screen and (min-width: 577px) and (max-width: 1024px) {
+  header , 
+  main ,
+  .banner-container ,
+  .footer-container ,
+  .right-side ,
+  .column{
+    padding: 50px;
+  }
+  /* nav links styles */
+  .hamburger{
+    display: block;
+    order: 1;
+    margin-right: 20px;
+  }
+  .nav-links{
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+  }
+  #checked:checked ~ .nav-links{
+    right: 0;
+  }
+  /* nav links styles end */
+  .logo h3 ,
+   .title ,
+   .news-logo{
+    font-size: var(--title-font-size);
+  }
+  .input-container ,
+  .tour-container,
+  .perfect-getaway-container ,
+  .newsletter-container ,
+  .column-wrapper-1 ,
+  .column-wrapper-3{
+    flex-direction: column;
+  }
+  
+  input , select , button ,
+  .tour-img img ,
+  .choose-us-content .content ,
+  .iframe ,
+  .newsletter-img img ,
+  .right-side{
+    width: 100%;
+    height: auto;
+  }
+  .img-container img{
+    width: 335px;
+    height: 176px;
+  }
+  .newsletter-logo{
+    left: 0;
+  }
+  .destination-img-container{
+    justify-content: center;
   }
   
 }
