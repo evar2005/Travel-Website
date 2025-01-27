@@ -121,7 +121,7 @@ footer{
 /* nav section end */
 /* banner section styles */
 .banner-container{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('../images/Group\ 13\ \(1\)\ \(1\).png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/Group\ 13\ \(1\)\ \(1\).png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -262,7 +262,7 @@ font-size: var(--secondary-font-size);
   width: 570px;
  }
  .column{
-  background-image: url('../images/Group\ 39.png');
+  background-image: url('/images/Group\ 39.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
