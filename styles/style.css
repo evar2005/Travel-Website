@@ -391,7 +391,7 @@ padding: 19px;
   .footer-container, 
   .right-side, 
   .column {
-    padding: 20px;
+    padding: 10px;
   }
 
   /* nav links styles */
@@ -485,6 +485,9 @@ padding: 19px;
   .right-side,
   .column {
     padding: 50px;
+  }
+  .banner-container{
+    height: 100%;
   }
 
   /* Navigation links styles */
